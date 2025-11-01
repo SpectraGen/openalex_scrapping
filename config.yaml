@@ -1,0 +1,73 @@
+# Example configuration for multiple Raman spectroscopy searches
+# This demonstrates how to configure multiple searches with different queries and page limits
+
+searches:
+  - name: "Raman_Spectroscopy_fundamentals"
+    query: "Raman Spectroscopy fundamentals"
+    per_page: 200          # Number of results per page
+    max_pages: 100         # Fetch up to 100 pages (100 x 200 = 20,000 papers max)
+    from_year: 2000
+    to_year: 2025
+    filters:
+      open_access:
+        is_oa: true        # Only open access papers
+
+  - name: "Raman_Spectroscopy_for_Materials_Science"
+    query: "Raman Spectroscopy for Materials Science"
+    per_page: 200          # Number of results per page
+    max_pages: 100         # Fetch up to 100 pages (100 x 200 = 20,000 papers max)
+    from_year: 2000
+    to_year: 2025
+    filters:
+      open_access:
+        is_oa: true        # Only open access papers
+
+  - name: "Raman_imaging_search"
+    query: "Raman imaging"
+    per_page: 200
+    max_pages: 20          # Fetch up to 20 pages (20 x 200 = 4,000 papers max)
+    from_year: 2000
+    to_year: 2025
+    filters:
+      open_access:
+        is_oa: true
+
+  - name: "Surface_enhanced_Raman_search"
+    query: "Surface enhanced Raman spectroscopy"
+    per_page: 200
+    max_pages: 20          # Fetch up to 20 pages (20 x 200 = 4,000 papers max)
+    from_year: 2000
+    to_year: 2025
+    filters:
+      open_access:
+        is_oa: true
+
+  - name: "Raman_scattering_search"
+    query: "Raman scattering"
+    per_page: 200
+    max_pages: 20          # Fetch up to 20 pages (20 x 200 = 4,000 papers max)
+    from_year: 2000
+    to_year: 2025
+    filters:
+      open_access:
+        is_oa: true
+
+  - name: "Raman_Spectroscopy_for_Cancer_Detection"
+    query: "Raman Spectroscopy for Cancer Detection"
+    per_page: 200
+    max_pages: 20          # Fetch up to 20 pages (20 x 200 = 4,000 papers max)
+    from_year: 2000
+    to_year: 2025
+    filters:
+      open_access:
+        is_oa: true
+
+# Single search example (backward compatible)
+# If you only want one search, you can use this format instead:
+#
+# query: "Raman spectroscopy"
+# per_page: 200
+# max_pages: 10
+# filters:
+#   open_access:
+#     is_oa: true
